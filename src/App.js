@@ -66,7 +66,7 @@ let d=document.getElementById('d');
 function refreshPage() {
     window.location.reload(false);
   }
-
+const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
  const handleClick1 = () => {
     if(answer=="optA"){
     a.className="answer-right";
@@ -157,9 +157,12 @@ function refreshPage() {
     <div className="quiz-container">
       {!showResult?(
   <main>
+    <div>
+        <span className="question-no">{addLeadingZero(current + 1)}</span>
+        <span className="question-no">/{addLeadingZero(questions.length)}</span>
+      </div>
   <h2>{question}</h2>
-  <div>Question {current+1}/10</div>
-  <div>Score {score}</div>
+  
   <ul>
   
   <li id="a" onClick={()=>handleClick1()}>{optA}</li>
