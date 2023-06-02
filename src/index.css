@@ -110,7 +110,8 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px
 }
 
 .quiz-container button:disabled {
@@ -131,13 +132,13 @@ body {
 }
 
 .result p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .result p span {
-  color: #800080;
-  font-size: 22px;
+  color: #454587;
+  font-size: 24px;
 }
 
 

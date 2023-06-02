@@ -9,7 +9,7 @@ import {shuffle} from "./shuffle.js";
  ******************************** */
 const getQuestions = async () => {
   const response = await fetch(
-    "https://the-trivia-api.com/api/questions?limit=10&difficulty=hard"
+    "https://the-trivia-api.com/api/questions?limit=16"
   );
 
   const questions = await response.json();
@@ -29,7 +29,7 @@ function App() {
 
 
 let qArr=[];
-for(let i=0; i<10; i++){
+for(let i=0; i<16; i++){
 
 qArr.push({});
 if(questions[i]!=undefined){
@@ -179,8 +179,17 @@ const addLeadingZero = (number) => (number > 9 ? number : `0${number}`)
           </div>
             
     </main>):(
-  <section>
-  <div>Your Score: {score}/10</div>
+  <section className="result">
+  <h3>Result</h3>
+          <p>
+            Total Questions: <span>{perguntas.length}</span>
+          </p>
+          <p>
+            Correct Answers:<span> {score}</span>
+          </p>
+          <p>
+            Wrong Answers:<span> {perguntas.length-score}</span>
+          </p>
     <div>
     <button onClick={refreshPage}>Start another quiz</button></div>
   </section>)}
