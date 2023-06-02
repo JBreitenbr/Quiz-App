@@ -3,10 +3,10 @@ import "./index.css";
 import {shuffle} from "./shuffle.js";
 
 
-/**
+/* ********************************
  * Helper function to get questions from The Trivia API
  * @returns an array of questions
- */
+ ******************************** */
 const getQuestions = async () => {
   const response = await fetch(
     "https://the-trivia-api.com/api/questions?limit=10&difficulty=hard"
