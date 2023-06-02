@@ -1,2 +1,2 @@
 ## This App is live on:
-"https://jbreitenbr.github.io/Quiz-App"
+https://jbreitenbr.github.io/Quiz-App
